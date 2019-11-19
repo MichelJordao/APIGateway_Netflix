@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jordao\\source\\repos\\ApiGateway_NetFlix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj": {}
+    "C:\\Users\\Jordao\\Documents\\GitHub\\APIGateway_Netflix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jordao\\source\\repos\\ApiGateway_NetFlix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj": {
+    "C:\\Users\\Jordao\\Documents\\GitHub\\APIGateway_Netflix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jordao\\source\\repos\\ApiGateway_NetFlix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj",
+        "projectUniqueName": "C:\\Users\\Jordao\\Documents\\GitHub\\APIGateway_Netflix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj",
         "projectName": "ApiGateway_NetFlix",
-        "projectPath": "C:\\Users\\Jordao\\source\\repos\\ApiGateway_NetFlix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj",
+        "projectPath": "C:\\Users\\Jordao\\Documents\\GitHub\\APIGateway_Netflix\\ApiGateway_NetFlix\\ApiGateway_NetFlix.csproj",
         "packagesPath": "C:\\Users\\Jordao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jordao\\source\\repos\\ApiGateway_NetFlix\\ApiGateway_NetFlix\\obj\\",
+        "outputPath": "C:\\Users\\Jordao\\Documents\\GitHub\\APIGateway_Netflix\\ApiGateway_NetFlix\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jordao\\AppData\\Roaming\\NuGet\\NuGet.Config",

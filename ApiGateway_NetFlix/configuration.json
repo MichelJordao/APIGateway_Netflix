@@ -1,17 +1,17 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/Filmes/ListarFilmes",
+      "DownstreamPathTemplate": "/request",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44315
+          "Port": 8883
         }
       ],
-      "UpstreamPathTemplate": "/Lst",
-      "UpstreamHttpMethod": [ "Get" ],
-      "Key": "Lista",
+      "UpstreamPathTemplate": "/NovoChamado",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "NovoChamado",
       "UseServiceDiscovery": true,
       "QoSOptions": {
         "ExceptionsAllowedBeforeBreaking": 2,
@@ -20,17 +20,131 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/Filmes/AdicionarFilmes",
+      "DownstreamPathTemplate": "/request",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44315
+          "Port": 8883
         }
       ],
-      "UpstreamPathTemplate": "/Add",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ],
-      "Key": "Add",
+      "UpstreamPathTemplate": "/ListaChamados",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ListaChamado",
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/request/{consumerId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8883
+        }
+      ],
+      "UpstreamPathTemplate": "/ChamadoPorCliente/{consumerId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ChamadoPorCliente",
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/request/status/types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8883
+        }
+      ],
+      "UpstreamPathTemplate": "/ChamadosPorTipo",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ChamadosPorTipo",
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/movies/details/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44366
+        }
+      ],
+      "UpstreamPathTemplate": "/DetalheFilme/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "DetalheFilme",
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/movies/details",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44366
+        }
+      ],
+      "UpstreamPathTemplate": "/ListaFilmes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ListaFilmes",
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/movies/detailsbykeyword/{key}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44366
+        }
+      ],
+      "UpstreamPathTemplate": "/BuscaFilmesPalavraChave/{key}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "BuscaFilmesPalavraChave",
+      "UseServiceDiscovery": true,
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 2000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/tag/{consumerId, key, value}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3000
+        }
+      ],
+      "UpstreamPathTemplate": "/Filmes/{consumerId, key, value}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ],
+      "Key": "Filmes",
       "UseServiceDiscovery": true,
       "QoSOptions": {
         "ExceptionsAllowedBeforeBreaking": 2,
@@ -40,7 +154,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:53887/Lst",
+    "BaseUrl": "http://localhost:53887/Netflix",
     "ServiceDiscoveryProvider": {
       "Host": "localhost",
       "Port": 8500,
